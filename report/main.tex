@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper,hidelinks]{article}
+
+\input{./texfiles/preamble.tex}
+
+\begin{document}
+
+  \input{./sections/titlepage.tex}
+
+  \input{"./sections/1. objective.tex"}
+  \input{"./sections/2. introduction.tex"}
+  \input{"./sections/3. methods and materials.tex"}
+  % \input{"./sections/5. results discussion.tex"}
+  \input{"./sections/4. results.tex"}
+  \input{"./sections/6. conclusion.tex"}
+
+  \begin{figure}[htb]
+    \caption{Distribuição uniforme}
+    \includegraphics[width=0.5\textwidth]{figures/uni__0.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/uni__1.pdf}
+    \label{fig:randomwalk_uniform}
+  \end{figure}
+
+  \begin{figure}[htb]
+    \caption{Distribuição uniforme (escala log)}
+    \includegraphics[width=0.5\textwidth]{figures/uni__0__log.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/uni__1__log.pdf}
+    \label{fig:randomwalk_uniform_log}
+  \end{figure}
+
+  \pagebreak
+
+  \begin{figure}[htb]
+    \caption{Distribuição q-Gaussiana ($q = 0.5$)}
+    \includegraphics[width=0.5\textwidth]{figures/0_5__0.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/0_5__1.pdf}
+    \label{fig:randomwalk_q-gaussian_0.5}
+  \end{figure}
+
+  \begin{figure}[htb]
+    \caption{Distribuição q-Gaussiana ($q = 0.5$, escala log)}
+    \includegraphics[width=0.5\textwidth]{figures/0_5__0__log.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/0_5__1__log.pdf}
+    \label{fig:randomwalk_q-gaussian_0.5_log}
+  \end{figure}
+
+  \pagebreak
+
+  \begin{figure}[htb]
+    \caption{Distribuição Gaussiana ($q = 1.0$)}
+    \includegraphics[width=0.5\textwidth]{figures/1_0__0.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/1_0__1.pdf}
+    \label{fig:randomwalk_gaussian}
+  \end{figure}
+
+  \begin{figure}[htb]
+    \caption{Distribuição Gaussiana ($q = 1.0$, escala log)}
+    \includegraphics[width=0.5\textwidth]{figures/1_0__0__log.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/1_0__1__log.pdf}
+    \label{fig:randomwalk_gaussian_log}
+  \end{figure}
+
+  \pagebreak
+
+  \begin{figure}[htb]
+    \caption{Distribuição q-Gaussiana ($q = 1.5$)}
+    \includegraphics[width=0.5\textwidth]{figures/1_5__0.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/1_5__1.pdf}
+    \label{fig:randomwalk_q-gaussian_1.5}
+  \end{figure}
+
+  \begin{figure}[htb]
+    \caption{Distribuição q-Gaussiana ($q = 1.5$, escala log)}
+    \includegraphics[width=0.5\textwidth]{figures/1_5__0__log.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/1_5__1__log.pdf}
+    \label{fig:randomwalk_q-gaussian_1.5_log}
+  \end{figure}
+
+  \pagebreak
+
+  \begin{figure}[htb]
+    \caption{Distribuição q-Gaussiana ($q = 2.0$)}
+    \includegraphics[width=0.5\textwidth]{figures/2_0__0.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/2_0__1.pdf}
+    \label{fig:randomwalk_q-gaussian_2.0}
+  \end{figure}
+
+  \begin{figure}[htb]
+    \caption{Distribuição q-Gaussiana ($q = 2.0$, escala log)}
+    \includegraphics[width=0.5\textwidth]{figures/2_0__0__log.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/2_0__1__log.pdf}
+    \label{fig:randomwalk_q-gaussian_2.0_log}
+  \end{figure}
+
+  \pagebreak
+
+  \begin{figure}[htb]
+    \caption{Distribuição q-Gaussiana ($q = 2.5$)}
+    \includegraphics[width=0.5\textwidth]{figures/2_5__0.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/2_5__1.pdf}
+    \label{fig:randomwalk_q-gaussian_2.5}
+  \end{figure}
+
+  \begin{figure}[htb]
+    \caption{Distribuição q-Gaussiana ($q = 2.5$, escala log)}
+    \includegraphics[width=0.5\textwidth]{figures/2_5__0__log.pdf}
+    \includegraphics[width=0.5\textwidth]{figures/2_5__1__log.pdf}
+    \label{fig:randomwalk_q-gaussian_2.5_log}
+  \end{figure}
+
+  \pagebreak
+
+  \section{Referências}
+    \vspace{-10mm}
+    \bibliographystyle{abbrv}
+    \bibliography{refbase.bib}
+
+  % \input{"./sections/8. appendices.tex"}
+
+\end{document}

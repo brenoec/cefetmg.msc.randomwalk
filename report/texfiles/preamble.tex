@@ -1,0 +1,57 @@
+
+\usepackage[space]{grffile}
+\usepackage[utf8]{inputenc}
+\usepackage{bookmark}
+\usepackage{fancyhdr}
+\usepackage{libertine}
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{accents}
+\usepackage{verbatim}
+\usepackage{silence,lmodern}
+\usepackage{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage[section]{placeins}
+
+\setlength\parindent{0pt}
+
+\captionsetup[figure]{position=above}
+
+\hypersetup{colorlinks=false}
+
+\geometry{
+  a4paper,
+  total={150mm,237mm},
+  left=30mm,
+  top=30mm,
+}
+
+\fancyhf{}
+\rfoot{\thepage}
+\pagestyle{fancy}
+
+\floatname{algorithm}{Pseudocódigo}
+\renewcommand{\figurename}{Figura}
+\renewcommand\refname{}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.7pt}
+
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\thesection\arabic{subsection}.}
+\renewcommand\thesubsubsection{\thesubsection\arabic{subsubsection}.}
+\renewcommand{\theequation}{\thesection\arabic{equation}}
+\renewcommand{\thefigure}{\thesection\arabic{figure}}
+
+\algrenewcommand\algorithmicrequire{\textbf{Pré-condição:}}
+\algrenewcommand\algorithmicensure{\textbf{Pós-condição:}}
+
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+
+\captionsetup[figure]{font=normalsize}

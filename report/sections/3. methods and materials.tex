@@ -1,0 +1,62 @@
+
+\section{Materiais e Métodos}
+
+As simulações tem teor probabilístico. Logo, se mostrou necessária a
+implementação de um gerador de números pseudoaleatórios; portanto. O gerador
+implementado foi o \texttt{Ranq2} \cite{Press:Numerical:Recipes}.
+
+\vspace{5mm}
+O método generalizado de box-müller \cite{Tsallis:2007:GeneralizedBoxMuller}
+foi utilizado para gerar as distribuições Gaussiana e q-Gaussiana. O método
+utiliza dois valores pseudoaleatórios gerados uniformemente para gerar um par
+de valores na distribuição desejada.
+
+\vspace{5mm}
+O Pseudocódigo \ref{alg:rand-gaussian} mostra o procedimento para a geração
+de um par através do método, para distribuição Gaussiana. É necessário
+substituir a função logaritmo pela função q-logaritmo de $q\prime$ para
+gerarmos um par na distribuição q-Gaussiana:
+
+\begin{equation}
+  q \in (-\infty, 3), \quad q \neq 1,
+\end{equation}
+
+\begin{equation}
+  q\prime = \frac{1+q}{3-q},
+\end{equation}
+
+\begin{equation}
+  x > 0,
+\end{equation}
+
+\begin{equation}
+  ln_q = \frac{x^{1-q}-1}{1-q}.
+\end{equation}
+
+\begin{algorithm}
+  \caption{Gerador de números pseudoaleatórios para Gaussiana}
+  \label{alg:rand-gaussian}
+
+  \begin{algorithmic}[1]
+    \Function{RandomGaussian}{}
+    \Statex
+
+      \Let{$n_1$}{\texttt{Ranq2}} \Comment{$n \in [0,1)$}
+      \Let{$n_2$}{\texttt{Ranq2}}
+      \Statex
+
+      \Let{$z_1$}{$\sqrt{\smash[b]{-2 \:ln(n_1)}} \:\cos(2 \:\pi \:u_2)$}
+      \Let{$z_2$}{$\sqrt{\smash[b]{-2 \:ln(n_1)}} \:\sin(2 \:\pi \:u_2)$}
+      \Statex
+    \EndFunction
+  \end{algorithmic}
+\end{algorithm}
+
+\vspace{5mm}
+Para todas as distribuições, o passo do caminhante é o valor gerado pelo gerador
+de números pseudoaleatório.
+
+\vspace{5mm}
+Cada simulação gera 2 grupos de 10 caminhadas aleatórias, com 10.000 passos,
+para cada distribuição. Cada elemento do par gera um grupo distinto de
+caminhadas.
